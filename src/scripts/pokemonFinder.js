@@ -2,6 +2,9 @@
 
 // Data for sets: https://api.pokemontcg.io/v2/sets
 
+// Import colors from colors.json
+import colors from '../colors.json';
+
 const sets = 'https://api.pokemontcg.io/v2/sets';
 
 // Fetch the sets and put them into options in order by date released
@@ -24,7 +27,7 @@ fetch(sets)
   })
   .catch(error => {
     console.error('Error fetching data:', error);
-});
+  });
 
 document.getElementById('pokemon-sets').addEventListener('change', function() {
   const setID = this.value;
@@ -44,15 +47,27 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
         return a.number - b.number;
       });
       cards.forEach(card => {
-        const temp = `
-          <ul class='card'>
-            <li>${card.name}</li>
-            <img class='pokeIMG' src="${card.images.large}" alt="">
-            <li class='author'>Author: ${card.artist}</li>
-            <li class='cardNum'>Card Number: ${card.number}</li>
-          </ul>
-        `;
-        container.insertAdjacentHTML('beforeend', temp);
+        if (card.types && card.types.length == 1) { // Check if card.types is defined
+          const temp = `
+            <ul class='card' style='border-color: ${colors.Colors[card.types[0]]};'>
+              <li>${card.name}</li>
+              <img class='pokeIMG' src="${card.images.large}" alt="">
+              <li class='author'>Author: ${card.artist}</li>
+              <li class='cardNum'>Card Number: ${card.number}</li>
+            </ul>
+          `;
+          container.insertAdjacentHTML('beforeend', temp);
+        } else if (card.types && card.types.length == 2) {
+          const temp = `
+            <ul class='card' style='border-image: linear-gradient(to bottom right, ${colors.Colors[card.types[0]]} 10%, ${colors.Colors[card.types[1]]} 100%) 1;'>
+              <li>${card.name}</li>
+              <img class='pokeIMG' src="${card.images.large}" alt="">
+              <li class='author'>Author: ${card.artist}</li>
+              <li class='cardNum'>Card Number: ${card.number}</li>
+            </ul>
+          `;
+          container.insertAdjacentHTML('beforeend', temp);
+        }
       });
     })
     .catch(error => {
