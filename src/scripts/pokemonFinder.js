@@ -26,7 +26,6 @@ fetch(sets)
     console.error('Error fetching data:', error);
 });
 
-// Fetch the cards from the selected set and display them in the section called container, add a button to then display the cards of the selected set
 document.getElementById('pokemon-sets').addEventListener('change', function() {
   const setID = this.value;
   const data = 'https://api.pokemontcg.io/v2/cards?q=set.id:' + setID;
