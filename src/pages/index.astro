@@ -14,22 +14,28 @@ import '../styles/index.css';
 <body>
 
 	<main>
-  
+		
 		<form id='pokemon-form'>
-		  
-		  <input id='pokemon-id-input' type="text" placeholder='Enter Pokemon ID'>
-		  <input id='sendBtn' type="submit" value='Search'>
-		  
+
+			<!-- <input id='pokemon-id-input' type="text" placeholder='Enter Pokemon ID'>
+			<input id='sendBtn' type="submit" value='Search'> -->
+
+			<select name="Sets" id="pokemon-sets">
+				<option value="" disabled selected hidden>Please Select a Set</option>
+				<option value="None">None</option>
+			</select>
+			
+		
 		</form>
 		
 		<section class='container'>
-		  
+		
 		</section>
 		
-	  </main>
-  
-  <!-- Connect the pokemonFinder.js script -->
-  <script src="../scripts/pokemonFinder.js"></script>
+	</main>
+
+<!-- Connect the pokemonFinder.js script -->
+<script src="../scripts/pokemonFinder.js"></script>
   
 </body>
 </html>

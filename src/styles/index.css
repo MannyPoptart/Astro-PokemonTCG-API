@@ -1,63 +1,73 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    font-size: 12pt;
-    gap: 1rem;
-    margin: 1rem;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    border: 5px pink solid;
-    align-items: center;
-    color: white;
-  }
-  
-  .card li {
-    margin: 1rem;
-    font-size: 16pt;
-  }
-  
-  .pokeIMG {
-    width: 75%;
-    margin: 1rem;
-  }
-  
-  #pokemon-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem;
-  }
-  
-  #pokemon-id-input {
-    height: 3rem;
-    width: fit-content;
-    font-size: 16pt;
-  }
-  
-  #sendBtn {
-    font-size: 24pt;
-    padding: 5pt;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 12pt;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  border: 5px lime inset;
+  background-color: purple;
+  align-items: center;
+  color: white;
+}
+
+.card li {
+  margin: 1rem;
+  font-size: 12pt;
+}
+
+.pokeIMG {
+  width: 75%;
+  margin: 1rem;
+}
+
+#pokemon-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.author {
+  text-align: center;
+}
+
+#pokemon-sets {
+  width: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  padding: 1rem;
+  background-color: lightblue;
+  border-radius: 15px;
+}
