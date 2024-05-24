@@ -1,0 +1,35 @@
+---
+import '../styles/index.css';
+
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Pokemon TCG Card Finder</title>
+</head>
+<body>
+
+	<main>
+  
+		<form id='pokemon-form'>
+		  
+		  <input id='pokemon-id-input' type="text" placeholder='Enter Pokemon ID'>
+		  <input id='sendBtn' type="submit" value='Search'>
+		  
+		</form>
+		
+		<section class='container'>
+		  
+		</section>
+		
+	  </main>
+  
+  <!-- Connect the pokemonFinder.js script -->
+  <script src="../scripts/pokemonFinder.js"></script>
+  
+</body>
+</html>
