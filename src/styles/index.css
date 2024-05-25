@@ -32,10 +32,12 @@ body {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  border: 5px gold ridge;
+  border: 10px gold ridge;
   background-color: rgb(26, 34, 34);
   align-items: center;
   color: white;
+  height: 100%;
+  width: 100%;
 }
 
 .card li {
@@ -71,4 +73,16 @@ body {
   padding: 1rem;
   background-color: lightblue;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    /* make all grid frames same size no matter what */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .card .author {
+    font-size: 12pt;
+  }
+
 }
