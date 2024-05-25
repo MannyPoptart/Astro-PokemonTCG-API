@@ -79,7 +79,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .card .author {
+  .card .artist {
     font-size: 10pt;
   }
 

@@ -53,7 +53,7 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
               <li>${card.name}</li>
               <li class='types'>Type: ${card.types[0]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
-              <li class='author'>Author: ${card.artist}</li>
+              <li class='artist'>Artist: ${card.artist}</li>
               <li class='cardNum'>Card Number: ${card.number}</li>
               <li class='weakness'>${card.weaknesses ? 'Weakness: ' + card.weaknesses[0].type : 'No Weakness'}</li>
             </ul>
@@ -65,7 +65,7 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
               <li>${card.name}</li>
               <li class='types'>Types: ${card.types[0]} & ${card.types[1]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
-              <li class='author'>Author: ${card.artist}</li>
+              <li class='artist'>Artist: ${card.artist}</li>
               <li class='cardNum'>Card Number: ${card.number}</li>
               <li class='weakness'>Weakness: ${card.weaknesses[0].type}</li>
             </ul>
