@@ -47,14 +47,14 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
         return a.number - b.number;
       });
       cards.forEach(card => {
-        if (card.types && card.types.length == 1) { // Check if card.types is defined
+        if (card.types && card.types.length >= 1) { // Check if card.types is defined
           const temp = `
             <ul class='card' style='border-color: ${colors.Colors[card.types[0]]};'>
               <li>${card.name}</li>
               <li class='types'>Type: ${card.types[0]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
               <li class='artist'>Artist: ${card.artist}</li>
-              <li class='cardNum'>Card Number: ${card.number}</li>
+              <li class='cardNum'>Card #: ${card.number} / ${card.set.total}</li>
               <li class='weakness'>${card.weaknesses ? 'Weakness: ' + card.weaknesses[0].type : 'No Weakness'}</li>
             </ul>
           `;
@@ -66,8 +66,19 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
               <li class='types'>Types: ${card.types[0]} & ${card.types[1]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
               <li class='artist'>Artist: ${card.artist}</li>
-              <li class='cardNum'>Card Number: ${card.number}</li>
+              <li class='cardNum'>Card #: ${card.number} / ${card.total}</li>
               <li class='weakness'>Weakness: ${card.weaknesses[0].type}</li>
+            </ul>
+          `;
+          container.insertAdjacentHTML('beforeend', temp);
+        } else {
+          const temp = `
+            <ul class='card' style='border-color: ${colors.Colors['Trainer']};'>
+              <li>${card.name}</li>
+              <li class='types'>Type: Trainer</li>
+              <img class='pokeIMG' src="${card.images.large}" alt="">
+              <li class='artist'>Artist: ${card.artist}</li>
+              <li class='cardNum'>Card #: ${card.number} / ${card.set.total}</li>
             </ul>
           `;
           container.insertAdjacentHTML('beforeend', temp);

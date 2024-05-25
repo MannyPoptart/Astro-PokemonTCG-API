@@ -8,9 +8,10 @@
       "Fighting": "orange",
       "Psychic": "purple",
       "Dragon": "#6F35FC",
-      "Darkness": "#705746",
-      "Metal": "#B7B7CE",
-      "Fairy": "lightpink"
+      "Darkness": "#255762",
+      "Metal": "#879da8",
+      "Fairy": "lightpink",
+      "Trainer": "#4c4b4c"
     }
   }
   
