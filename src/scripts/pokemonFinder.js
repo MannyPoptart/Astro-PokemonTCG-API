@@ -51,9 +51,11 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
           const temp = `
             <ul class='card' style='border-color: ${colors.Colors[card.types[0]]};'>
               <li>${card.name}</li>
+              <li class='types'>Type: ${card.types[0]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
               <li class='author'>Author: ${card.artist}</li>
               <li class='cardNum'>Card Number: ${card.number}</li>
+              <li class='weakness'>${card.weaknesses ? 'Weakness: ' + card.weaknesses[0].type : 'No Weakness'}</li>
             </ul>
           `;
           container.insertAdjacentHTML('beforeend', temp);
@@ -61,9 +63,11 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
           const temp = `
             <ul class='card' style='border-image: linear-gradient(to bottom right, ${colors.Colors[card.types[0]]} 10%, ${colors.Colors[card.types[1]]} 100%) 1;'>
               <li>${card.name}</li>
+              <li class='types'>Types: ${card.types[0]} & ${card.types[1]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
               <li class='author'>Author: ${card.artist}</li>
               <li class='cardNum'>Card Number: ${card.number}</li>
+              <li class='weakness'>Weakness: ${card.weaknesses[0].type}</li>
             </ul>
           `;
           container.insertAdjacentHTML('beforeend', temp);

@@ -34,7 +34,9 @@ body {
   list-style-type: none;
   border: 10px gold ridge;
   background-color: rgb(26, 34, 34);
+  text-align: center;
   align-items: center;
+  /* justify-content: center; */
   color: white;
   height: 100%;
   width: 100%;
@@ -60,10 +62,6 @@ body {
   margin: 1rem;
 }
 
-.author {
-  text-align: center;
-}
-
 #pokemon-sets {
   width: 300px;
   text-align: center;
@@ -78,11 +76,15 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     /* make all grid frames same size no matter what */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .card .author {
-    font-size: 12pt;
+    font-size: 10pt;
+  }
+
+  .card .types {
+    font-size: 10pt;
   }
 
 }
