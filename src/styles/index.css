@@ -73,6 +73,12 @@ body {
   border-radius: 15px;
 }
 
+.message {
+  color: white;
+  text-align: center;
+  border: 5px solid gold;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
