@@ -66,7 +66,7 @@ document.getElementById('pokemon-sets').addEventListener('change', function() {
               <li class='types'>Types: ${card.types[0]} & ${card.types[1]}</li>
               <img class='pokeIMG' src="${card.images.large}" alt="">
               <li class='artist'>Artist: ${card.artist}</li>
-              <li class='cardNum'>Card #: ${card.number} / ${card.total}</li>
+              <li class='cardNum'>Card #: ${card.number} / ${card.set.total}</li>
               <li class='weakness'>Weakness: ${card.weaknesses[0].type}</li>
             </ul>
           `;
