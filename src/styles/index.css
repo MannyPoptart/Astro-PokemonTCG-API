@@ -53,6 +53,30 @@ body {
   border-radius: 5px;
 }
 
+/* On Hover, make the pokeIMG go into the center of the page and expand double */
+.pokeIMG:hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.75);
+  z-index: 1000;
+}
+
+#nextPage {
+  /* Hide the button */
+  display: none;
+  width: 50%;
+  padding: 1rem;
+  margin: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: lightblue;
+  border-radius: 15px;
+}
+
+
 #pokemon-form {
   display: flex;
   flex-direction: column;
